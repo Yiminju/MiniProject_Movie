@@ -6,12 +6,7 @@ import './MovieDetail.css';
 // MovieDetail 컴포넌트 정의
 const MovieDetail = () => {
   // 영화 상세 정보를 상태로 관리
-  const [movie, setMovie] = useState(null);
-
-  // 컴포넌트가 마운트될 때 movieDetailData를 상태에 설정
-  useEffect(() => {
-    setMovie(movieDetailData);
-  }, []);
+  const [movie, setMovie] = useState(movieDetailData);
 
   // 영화 데이터가 로드되지 않았을 때 로딩 메시지 표시
   if (!movie) return <div>Loading...</div>;
