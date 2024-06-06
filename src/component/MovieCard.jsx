@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MovieCard.css";
+import "../css/MovieCard.css";
 
 const MovieCard = ({ id, poster, title, rating }) => {
   return (
@@ -15,7 +15,7 @@ const MovieCard = ({ id, poster, title, rating }) => {
         />
         <div className="movie-details">
           {/* 영화 제목 */}
-          <h3>{title}</h3>
+          <h3 className="t">{title}</h3>
           {/* 영화 평점 */}
           <p>Rating: {rating}</p>
         </div>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import "./MovieDetail.css";
+import "../css/MovieDetail.css";
+import NavBar from "./NavBar";
 
 // 환경변수로부터 TMdb API 키를 가져옴
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -39,30 +40,33 @@ const MovieDetail = () => {
   if (!movie) return <div>Loading...</div>;
 
   return (
-    <div className="movie-detail">
-      {/* 영화 배경 이미지 */}
-      <img
-        src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
-        alt={movie.title}
-        className="movie-backdrop"
-      />
-      <div className="movie-info">
-        {/* 영화 포스터 이미지 */}
+    <>
+      <NavBar />
+      <div className="movie-detail">
+        {/* 영화 배경 이미지 */}
         <img
-          src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
           alt={movie.title}
-          className="movie-poster"
+          className="movie-backdrop"
         />
-        {/* 영화 제목 */}
-        <h2>{movie.title}</h2>
-        {/* 영화 평점 */}
-        <p>Rating: {movie.vote_average}</p>
-        {/* 영화 장르 */}
-        <p>Genres: {movie.genres.map((genre) => genre.name).join(", ")}</p>
-        {/* 영화 줄거리 */}
-        <p>{movie.overview}</p>
+        <div className="movie-info">
+          {/* 영화 포스터 이미지 */}
+          <img
+            src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+            alt={movie.title}
+            className="movie-poster"
+          />
+          {/* 영화 제목 */}
+          <h2>{movie.title}</h2>
+          {/* 영화 평점 */}
+          <p>Rating: {movie.vote_average}</p>
+          {/* 영화 장르 */}
+          <p>Genres: {movie.genres.map((genre) => genre.name).join(", ")}</p>
+          {/* 영화 줄거리 */}
+          <p>{movie.overview}</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

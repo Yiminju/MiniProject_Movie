@@ -1,0 +1,36 @@
+/* 각 영화 카드 스타일 */
+.movie-card {
+  background-color: #fff; /* 흰색 배경 */
+  border-radius: 10px; /* 둥근 모서리 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 깊이감을 위한 가벼운 그림자 */
+  overflow: hidden; /* 넘치는 내용 숨김 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  transition: transform 0.2s; /* 변형의 부드러운 전환 */
+}
+
+.movie-card:hover {
+  transform: scale(1.05); /* 호버 시 카드 크기 확대 */
+}
+
+.movie-poster {
+  width: 100%; /* 카드의 전체 너비 */
+  height: auto; /* 비율 유지 */
+}
+
+.movie-details {
+  padding: 15px; /* 컨테이너 내부의 패딩 */
+}
+
+.movie-details h3 {
+  margin: 10px 0; /* 제목 주변의 여백 */
+  font-size: 1.2rem; /* 글꼴 크기 */
+}
+
+.movie-details p {
+  margin: 0; /* 여백 없음 */
+  font-size: 1rem; /* 글꼴 크기 */
+  color: #666; /* 텍스트 색상 */
+}
+.t {
+  overflow: hidden;
+}
