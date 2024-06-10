@@ -22,8 +22,13 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+//initializeApp 함수를 호출함으로써, Firebase 서비스가 애플리케이션에 연결되고 초기화됩니다.
 const app = initializeApp(firebaseConfig);
+//getAuth 함수는 Firebase 인증 서비스를 초기화하고, 인증 서비스에 대한 참조를 반환합니다.
 const auth = getAuth(app);
+//GoogleAuthProvider는 Firebase 인증에서 제공하는 클래스 중 하나로,
+//Google 계정을 사용한 인증을 처리하는 공급자를 설정합니다.
+//new GoogleAuthProvider()를 호출하면 Google 인증 공급자 객체가 생성됩니다.
 const provider = new GoogleAuthProvider();
 
 // Google 로그인 함수

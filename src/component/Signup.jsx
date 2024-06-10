@@ -24,12 +24,16 @@ const Signup = () => {
       setError("Invalid email address");
       return;
     }
+    // 비밀번호 길이 검사
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return;
+    }
     // 비밀번호 확인 검사
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       return;
     }
-    // Firebase 이메일로 회원가입 시도
 
     SignupWithEmail(email, password);
     navigate("/"); // 회원가입 성공 후 홈 페이지로 리디렉션
