@@ -1,3 +1,4 @@
+//App.jsx
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import axios from "axios";
@@ -8,6 +9,7 @@ import NavBar from "./component/NavBar";
 import Signup from "./component/Signup";
 import Login from "./component/Login";
 import SearchPage from "./component/SearchPage";
+import MyPage from "./component/MyPage";
 
 // TMdb API 키를 환경변수로부터 가져옴
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -73,6 +75,7 @@ const App = () => {
         <Route path="/search" element={<SearchPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/mypage" element={<MyPage />} />
       </Routes>
     </>
   );

@@ -1,6 +1,7 @@
 /* 각 영화 카드 스타일 */
 .movie-card {
   background-color: #fff; /* 흰색 배경 */
+  box-sizing: border-box;
   border-radius: 10px; /* 둥근 모서리 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 깊이감을 위한 가벼운 그림자 */
   overflow: hidden; /* 넘치는 내용 숨김 */
